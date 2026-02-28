@@ -8,17 +8,19 @@
 
 namespace dx3d 
 {
-	class GraphicsDevice final : public Base
+	class GraphicsDevice final : public Base ,public std::enable_shared_from_this<GraphicsDevice>
 	{
 	public:
 		explicit GraphicsDevice(const GraphicsDeviceDesc& desc);
 		virtual ~GraphicsDevice() final;
 
-		GraphicsDeviceDesc getGraphicsResourceDesc();
 		FencePtr createFence();
 		MsaaPtr createMsaa();
 		CommandListPtr createCommadList();
 		 
+
+	private:
+		GraphicsResourcesDesc getGraphicsResourcesDesc() const noexcept;
 
 	private:
 		Microsoft::WRL::ComPtr<ID3D12Device> m_device{};

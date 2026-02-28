@@ -3,6 +3,7 @@
 
 #include<DX3D12/Graphics/Fence.h>
 #include<DX3D12/Graphics/Msaa.h>
+#include<DX3D12/Graphics/CommandList.h>
 
 
 dx3d::GraphicsDevice::GraphicsDevice(const GraphicsDeviceDesc& desc):
@@ -35,22 +36,22 @@ dx3d::GraphicsDevice::~GraphicsDevice()
 {
 }
 
-dx3d::GraphicsDeviceDesc dx3d::GraphicsDevice::getGraphicsResourceDesc()
+dx3d::GraphicsResourcesDesc dx3d::GraphicsDevice::getGraphicsResourcesDesc() const noexcept
 {
-	return GraphicsDeviceDesc({m_logger});
+	return { {m_logger}, shared_from_this(), *m_device.Get(), *m_factory.Get() };
 }
 
 dx3d::FencePtr dx3d::GraphicsDevice::createFence()
 {
-	return std::make_shared<Fence>(getGraphicsResourceDesc());
+	return std::make_shared<Fence>(getGraphicsResourcesDesc());
 }
 
 dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa()
 {
-	return std::make_shared<Msaa>(getGraphicsResourceDesc());
+	return std::make_shared<Msaa>(getGraphicsResourcesDesc());
 }
 
 dx3d::CommandListPtr dx3d::GraphicsDevice::createCommadList()
 {
-	return std::make_shared<CommandList>(getGraphicsResourceDesc());
+	return std::make_shared<CommandList>(getGraphicsResourcesDesc());
 }
