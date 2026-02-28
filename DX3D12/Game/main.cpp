@@ -1,5 +1,5 @@
 #include<DX3D12/All.h>
-#include<DX3D12/Core/Comman.h>
+#include<DX3D12/Core/Common.h>
 
 int main() 
 {

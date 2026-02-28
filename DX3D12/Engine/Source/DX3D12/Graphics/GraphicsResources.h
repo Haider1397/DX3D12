@@ -31,6 +31,7 @@ namespace dx3d
 		ID3D12Device& m_device;
 		IDXGIFactory4& m_factory;
 	
+		virtual ~GraphicsResources() {};
 	};
 
 

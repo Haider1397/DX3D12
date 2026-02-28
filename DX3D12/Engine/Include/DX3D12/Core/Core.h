@@ -13,10 +13,12 @@ namespace dx3d
 	class Logger;
 	class Fence;
 	class Msaa;
+	class CommandList;
 
 
 	using GraphicsDevicePtr = std::shared_ptr <GraphicsDevice>;
 	using FencePtr = std::shared_ptr <Fence>;
 	using MsaaPtr = std::shared_ptr <Msaa>;
+	using CommandListPtr = std::shared_ptr <CommandList>;
 
 }

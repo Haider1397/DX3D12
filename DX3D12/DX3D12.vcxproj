@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\CommandList.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Core\Base.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Game.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Win32\GameWin32.cpp" />
@@ -142,9 +143,10 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h" />
     <ClInclude Include="Engine\Include\DX3D12\All.h" />
     <ClInclude Include="Engine\Include\DX3D12\Core\Base.h" />
-    <ClInclude Include="Engine\Include\DX3D12\Core\Comman.h" />
+    <ClInclude Include="Engine\Include\DX3D12\Core\Common.h" />
     <ClInclude Include="Engine\Include\DX3D12\Core\Core.h" />
     <ClInclude Include="Engine\Include\DX3D12\Math\Rect.h" />
     <ClInclude Include="Engine\Include\DX3D12\Window\Window.h" />

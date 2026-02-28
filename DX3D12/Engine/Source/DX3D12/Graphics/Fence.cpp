@@ -8,7 +8,7 @@ dx3d::Fence::Fence(const GraphicsResourcesDesc& gDesc):
 	m_dsvDescSize = m_device.GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_DSV);
 	m_sbvSrvDescSize = m_device.GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
 
-	DX3DGraphicsLogThrowOnFail(m_device.CreateFence(NULL, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&m_fence)),"CreateFence failed.");
+	DX3DGraphicsLogThrowOnFail(m_device.CreateFence(NULL, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&m_fence)),"createFence failed.");
 }
 
 dx3d::Fence::~Fence()

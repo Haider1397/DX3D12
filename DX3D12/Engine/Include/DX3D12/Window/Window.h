@@ -1,6 +1,6 @@
 #pragma once
 #include<DX3D12/Core/Base.h>
-#include<DX3D12/Core/Comman.h>
+#include<DX3D12/Core/Common.h>
 #include<windows.h>
 
 namespace dx3d

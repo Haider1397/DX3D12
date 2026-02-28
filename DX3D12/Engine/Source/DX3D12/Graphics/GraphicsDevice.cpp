@@ -35,17 +35,22 @@ dx3d::GraphicsDevice::~GraphicsDevice()
 {
 }
 
-dx3d::GraphicsDeviceDesc dx3d::GraphicsDevice::GetGraphicsResourceDesc()
+dx3d::GraphicsDeviceDesc dx3d::GraphicsDevice::getGraphicsResourceDesc()
 {
 	return GraphicsDeviceDesc({m_logger});
 }
 
-dx3d::FencePtr dx3d::GraphicsDevice::CreateFence()
+dx3d::FencePtr dx3d::GraphicsDevice::createFence()
 {
-	return std::make_shared<Fence>(GetGraphicsResourceDesc());
+	return std::make_shared<Fence>(getGraphicsResourceDesc());
 }
 
-dx3d::MsaaPtr dx3d::GraphicsDevice::CreateMsaa()
+dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa()
 {
-	return std::make_shared<Msaa>(GetGraphicsResourceDesc());
+	return std::make_shared<Msaa>(getGraphicsResourceDesc());
+}
+
+dx3d::CommandListPtr dx3d::GraphicsDevice::createCommadList()
+{
+	return std::make_shared<CommandList>(getGraphicsResourceDesc());
 }

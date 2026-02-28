@@ -1,7 +1,7 @@
 #pragma once
 #include<DX3D12/Graphics/GraphicsUtils.h>
 #include<DX3D12/Graphics/GraphicsResources.h>
-#include<DX3D12/Core/Comman.h>
+#include<DX3D12/Core/Common.h>
 
 namespace dx3d
 {

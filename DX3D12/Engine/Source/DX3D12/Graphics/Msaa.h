@@ -12,7 +12,7 @@ namespace dx3d
 		~Msaa();
 
 	private:
-		DXGI_FORMAT m_backBufferFormet{}; //Must Be Later Changed Later To Swap Chain
+		DXGI_FORMAT m_backBufferFormet{ DXGI_FORMAT_R8G8B8A8_SNORM }; //Must Be Later Changed Later To Swap Chain
 
 		UINT m_4xMsaaQualityLvl{};
 	};

@@ -7,8 +7,8 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& gDesc):
 	Base(gDesc.base)
 {
 	m_graphicsDevice  = std::make_shared<GraphicsDevice>(GraphicsDeviceDesc{ m_logger });
-	m_fence = m_graphicsDevice->CreateFence();
-	m_msaa = m_graphicsDevice->CreateMsaa();
+	m_fence = m_graphicsDevice->createFence();
+	m_msaa = m_graphicsDevice->createMsaa();
 }
 
 dx3d::GraphicsEngine::~GraphicsEngine()
