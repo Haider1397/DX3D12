@@ -1,4 +1,4 @@
-#include <dx3d/Window/Window.h>
+#include <DX3D12/Window/Window.h>
 #include <functional>
 
 static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
@@ -34,7 +34,7 @@ dx3d::Window::Window(const WindowDesc& desc):
 	static const auto windowClassId = std::invoke(registerWindowClassFunction);
 
 	if (!windowClassId)
-		dx3dLogThrowError("RegisterClassEx failed.");
+		DX3D12LogThrowError("RegisterClassEx failed.");
 
 	RECT size{};
 
@@ -48,18 +48,17 @@ dx3d::Window::Window(const WindowDesc& desc):
 	m_hwnd = CreateWindowEx(NULL, MAKEINTATOM(windowClassId), m_name,
 		WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,
 		CW_USEDEFAULT, CW_USEDEFAULT, m_size.x, m_size.y,
-		NULL, NULL, NULL, NULL),
-		"CreateWindowEx failed.";
+		NULL, NULL, NULL, NULL);
 
 	if (!m_hwnd)
-		dx3dLogThrowError("CreateWindowEx failed.");
+		DX3D12LogThrowError("CreateWindowEx failed.");
 
 	ShowWindow(m_hwnd, SW_SHOW);
-	dx3dLogInfo("ShowWindow completed.");
+	DX3D12LogThrowError("ShowWindow completed.");
 }
 
 dx3d::Window::~Window()
 {
 	DestroyWindow(m_hwnd);
-	dx3dLogInfo("Window destoryed.");
+	DX3D12LogInfo("Window destoryed.");
 }

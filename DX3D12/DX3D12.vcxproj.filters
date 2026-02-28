@@ -39,6 +39,15 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsLogUtils.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\Fence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Include\DX3D12\Window\Window.h">
@@ -68,7 +77,19 @@
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Include\DX3D12\Graphics\GraphicsEngine.h">
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\Fence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

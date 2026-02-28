@@ -9,7 +9,6 @@ namespace dx3d
 	{
 		Logger& logger;
 	};
-
 	struct WindowDesc 
 	{
 		BaseDesc base;
@@ -23,9 +22,14 @@ namespace dx3d
 	{
 		BaseDesc base;
 	};
+
 	struct GameDesc 
 	{
 		Rect wndsize{ 1200 ,720 };
 		Logger::LogLevel logLevel = Logger::LogLevel::Info;
+	};
+	struct GraphicsDeviceDesc
+	{
+		BaseDesc base;
 	};
 }

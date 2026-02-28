@@ -108,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>dxgi.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,17 +125,21 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>dxgi.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Source\DX3D12\Core\Base.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Game.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Win32\GameWin32.cpp" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsLogUtils.h" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\Fence.cpp" />
     <ClCompile Include="Game\main.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Window\Win32\WindowWin32.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Core\Logger.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsDevice.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.cpp" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Include\DX3D12\All.h" />
@@ -146,7 +151,11 @@
     <ClInclude Include="Engine\Include\DX3D12\Game\Game.h" />
     <ClInclude Include="Engine\Include\DX3D12\Core\Logger.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsDevice.h" />
-    <ClInclude Include="Engine\Include\DX3D12\Graphics\GraphicsEngine.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsResources.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsUtils.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\Fence.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

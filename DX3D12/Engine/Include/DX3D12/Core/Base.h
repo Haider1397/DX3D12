@@ -1,5 +1,4 @@
 #pragma once
-
 #include<DX3D12/Core/Comman.h>
 #include<DX3D12/Core/Logger.h>
 
