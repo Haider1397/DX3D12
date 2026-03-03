@@ -13,3 +13,8 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& gDesc):
 dx3d::GraphicsEngine::~GraphicsEngine()
 {
 }
+
+dx3d::GraphicsDevicePtr dx3d::GraphicsEngine::getGraphicsDevice()
+{
+	return m_graphicsDevice;
+}

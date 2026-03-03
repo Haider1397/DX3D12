@@ -10,6 +10,7 @@ namespace dx3d
 		explicit GraphicsEngine(const GraphicsEngineDesc& gDesc);
 		virtual ~GraphicsEngine();
 
+		GraphicsDevicePtr getGraphicsDevice();
 	private:
 		GraphicsDevicePtr m_graphicsDevice;
 		FencePtr m_fence;

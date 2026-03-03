@@ -32,7 +32,7 @@ namespace dx3d
 	{
 		Rect wndsize{};
 		void* hwnd;
-		ui32 backBufferFormat{ DXGI_FORMAT_R16G16B16A16_SNORM };
+		DXGI_FORMAT backBufferFormat{ DXGI_FORMAT_R16G16B16A16_SNORM };
 	};
 	struct GameDesc 
 	{

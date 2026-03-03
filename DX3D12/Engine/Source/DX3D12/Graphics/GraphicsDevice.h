@@ -13,7 +13,6 @@ namespace dx3d
 	public:
 		explicit GraphicsDevice(const GraphicsDeviceDesc& desc);
 		virtual ~GraphicsDevice() final;
-
 		FencePtr createFence();
 		MsaaPtr createMsaa(const MsaaDesc& desc);
 		SwapChainPtr createSwapChain(const SwapChainDesc& desc);
