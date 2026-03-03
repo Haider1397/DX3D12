@@ -4,6 +4,7 @@
 #include<DX3D12/Graphics/Fence.h>
 #include<DX3D12/Graphics/Msaa.h>
 #include<DX3D12/Graphics/CommandList.h>
+#include<DX3D12/Graphics/SwapChain.h>
 
 
 dx3d::GraphicsDevice::GraphicsDevice(const GraphicsDeviceDesc& desc):
@@ -54,4 +55,9 @@ dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa()
 dx3d::CommandListPtr dx3d::GraphicsDevice::createCommadList()
 {
 	return std::make_shared<CommandList>(getGraphicsResourcesDesc());
+}
+
+dx3d::SwapChainPtr dx3d::GraphicsDevice::createSwapChain(const SwapChainDesc& desc)
+{
+	return std::make_shared<SwapChain>(getGraphicsResourcesDesc(),desc);
 }

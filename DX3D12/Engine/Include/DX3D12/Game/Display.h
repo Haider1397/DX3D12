@@ -2,6 +2,7 @@
 
 #include<DX3D12/Window/Window.h>
 #include<DX3D12/Core/Common.h>
+#include<DX3D12/Graphics/SwapChain.h>
 
 namespace dx3d 
 {
@@ -12,7 +13,7 @@ namespace dx3d
 		virtual ~Display();
 
 	private:
-
+		SwapChainPtr m_swapChain;
 	};
 }
 

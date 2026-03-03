@@ -23,14 +23,19 @@ namespace dx3d
 	{
 		BaseDesc base;
 	};
+	struct GraphicsDeviceDesc
+	{
+		BaseDesc base;
+	};
+	struct SwapChainDesc
+	{
+		Rect wndSize;
+		void* hwnd;
+	};
 
 	struct GameDesc 
 	{
 		Rect wndsize{ 1200 ,720 };
 		Logger::LogLevel logLevel = Logger::LogLevel::Info;
-	};
-	struct GraphicsDeviceDesc
-	{
-		BaseDesc base;
 	};
 }

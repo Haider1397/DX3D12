@@ -11,10 +11,12 @@ namespace dx3d
 		explicit Window(const WindowDesc& desc);
 		virtual ~Window();
 
-	private:
+	protected:
 
-		static constexpr const wchar_t* m_name = L"Window";
 		Rect m_size{};
 		HWND m_hwnd{};
+
+	private:
+		static constexpr const wchar_t* m_name = L"Window";
 	};
 }
