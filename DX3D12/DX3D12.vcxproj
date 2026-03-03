@@ -108,7 +108,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>dxgi.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxgi.lib;d3d12.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -125,10 +126,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>dxgi.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxgi.lib;d3d12.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Source\DX3D12\Game\Display.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\CommandList.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Core\Base.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Game.cpp" />
@@ -141,8 +144,10 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsDevice.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\SwapChain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Include\DX3D12\Game\Display.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h" />
     <ClInclude Include="Engine\Include\DX3D12\All.h" />
     <ClInclude Include="Engine\Include\DX3D12\Core\Base.h" />
@@ -158,6 +163,7 @@
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsUtils.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Fence.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\SwapChain.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

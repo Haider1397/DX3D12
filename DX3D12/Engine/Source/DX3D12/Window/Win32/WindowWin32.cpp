@@ -54,7 +54,7 @@ dx3d::Window::Window(const WindowDesc& desc):
 		DX3D12LogThrowError("CreateWindowEx failed.");
 
 	ShowWindow(m_hwnd, SW_SHOW);
-	DX3D12LogThrowError("ShowWindow completed.");
+	DX3D12LogInfo("ShowWindow completed.");
 }
 
 dx3d::Window::~Window()

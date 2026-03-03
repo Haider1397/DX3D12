@@ -16,7 +16,8 @@ namespace dx3d
 	};
 	struct DisplayDesc 
 	{
-		BaseDesc base;
+		WindowDesc window;
+		GraphicsDevice& graphicsDevice;
 	};
 	struct GraphicsEngineDesc
 	{

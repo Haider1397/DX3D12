@@ -10,10 +10,13 @@ namespace dx3d
 		explicit GraphicsEngine(const GraphicsEngineDesc& gDesc);
 		virtual ~GraphicsEngine();
 
+		GraphicsDevice& getGraphicsDevice();
+
+
 	private:
 		GraphicsDevicePtr m_graphicsDevice;
-		FencePtr m_fence;
-		MsaaPtr m_msaa;
+		//FencePtr m_fence;
+		//MsaaPtr m_msaa;
 	};
 }
 
