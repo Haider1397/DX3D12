@@ -13,6 +13,10 @@ namespace dx3d
 		IDXGIFactory4& factory;
 	};
 
+	struct MsaaDesc
+	{
+		DXGI_FORMAT backBufferFormet{};
+	};
 
 	class GraphicsResources: public Base
 	{

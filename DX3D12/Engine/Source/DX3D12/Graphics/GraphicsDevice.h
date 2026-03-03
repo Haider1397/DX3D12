@@ -15,7 +15,8 @@ namespace dx3d
 		virtual ~GraphicsDevice() final;
 
 		FencePtr createFence();
-		MsaaPtr createMsaa();
+		MsaaPtr createMsaa(const MsaaDesc& desc);
+		SwapChainPtr createSwapChain(const SwapChainDesc& desc);
 		CommandListPtr createCommadList();
 		 
 

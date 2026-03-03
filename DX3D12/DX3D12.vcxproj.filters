@@ -48,15 +48,21 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\CommandList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\SwapChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Game\Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Include\DX3D12\Window\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Include\DX3D12\Core\Base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Include\DX3D12\Core\Comman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Include\DX3D12\Math\Rect.h">
@@ -90,6 +96,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Include\DX3D12\Core\Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\SwapChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Include\DX3D12\Game\Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

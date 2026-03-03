@@ -1,6 +1,7 @@
 #pragma once
 #include<DX3D12/Core/Base.h>
 #include<DX3D12/Core/Common.h>
+#define max(a,b)
 #include<DX3D12/Window/Window.h>
 #include<DX3D12/Core/Logger.h>
 #include<memory>

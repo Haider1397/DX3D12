@@ -8,12 +8,11 @@ namespace dx3d
 	{
 	public:
 
-		explicit Msaa(const GraphicsResourcesDesc& gdesc);
+		explicit Msaa(const GraphicsResourcesDesc& gdesc, const MsaaDesc& desc);
 		~Msaa();
 
 	private:
-		DXGI_FORMAT m_backBufferFormet{ DXGI_FORMAT_R8G8B8A8_SNORM }; //Must Be Later Changed Later To Swap Chain
-
+		DXGI_FORMAT m_backBufferFormet{};
 		UINT m_4xMsaaQualityLvl{};
 	};
 }

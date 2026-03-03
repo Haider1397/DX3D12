@@ -13,7 +13,6 @@ namespace dx3d
 	private:
 		GraphicsDevicePtr m_graphicsDevice;
 		FencePtr m_fence;
-		MsaaPtr m_msaa;
 	};
 }
 

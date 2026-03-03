@@ -2,8 +2,9 @@
 #include<DX3D12/Graphics/GraphicsLogUtils.h>
 
 
-dx3d::Msaa::Msaa(const GraphicsResourcesDesc& gdesc) :
-	GraphicsResources(gdesc)
+dx3d::Msaa::Msaa(const GraphicsResourcesDesc& gdesc, const MsaaDesc& desc) :
+	GraphicsResources(gdesc),
+	m_backBufferFormet(desc.backBufferFormet)
 {
 	D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS qualityLvls{};
 
