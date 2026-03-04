@@ -31,6 +31,8 @@ dx3d::GraphicsDevice::GraphicsDevice(const GraphicsDeviceDesc& desc):
 			DX3DGraphicsLogThrowOnFail(D3D12CreateDevice(warpAdapter.Get(), D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&m_device)),
 				"D3D12CreateDevice failed.");
 		}
+
+
 }
 
 dx3d::GraphicsDevice::~GraphicsDevice()
@@ -47,9 +49,14 @@ dx3d::FencePtr dx3d::GraphicsDevice::createFence()
 	return std::make_shared<Fence>(getGraphicsResourcesDesc());
 }
 
-dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa()
+dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa( const MsaaDesc& desc)
 {
-	return std::make_shared<Msaa>(getGraphicsResourcesDesc());
+	return std::make_shared<Msaa>(getGraphicsResourcesDesc(),desc);
+}
+
+dx3d::SwapChainPtr dx3d::GraphicsDevice::createSwapChain(const SwapChainDesc& desc)
+{
+	return std::make_shared<SwapChain>(getGraphicsResourcesDesc() ,desc);
 }
 
 dx3d::CommandListPtr dx3d::GraphicsDevice::createCommandList()
