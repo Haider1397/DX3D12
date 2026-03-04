@@ -52,10 +52,11 @@ dx3d::MsaaPtr dx3d::GraphicsDevice::createMsaa()
 	return std::make_shared<Msaa>(getGraphicsResourcesDesc());
 }
 
-dx3d::CommandListPtr dx3d::GraphicsDevice::createCommadList()
+dx3d::CommandListPtr dx3d::GraphicsDevice::createCommandList()
 {
 	return std::make_shared<CommandList>(getGraphicsResourcesDesc());
 }
+
 
 dx3d::SwapChainPtr dx3d::GraphicsDevice::createSwapChain(const SwapChainDesc& desc)
 {

@@ -13,7 +13,8 @@ namespace dx3d
 		virtual ~Display();
 
 	private:
-		SwapChainPtr m_swapChain;
+		SwapChainPtr m_swapChain{};
+		CommandListPtr m_commandList{};
 	};
 }
 

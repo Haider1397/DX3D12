@@ -4,7 +4,8 @@
 
 dx3d::Display::Display(const DisplayDesc desc):Window(desc.window)
 {
-	m_swapChain = desc.graphicsDevice.createSwapChain(SwapChainDesc{ m_size,m_hwnd });
+	m_commandList = desc.graphicsDevice.createCommandList();
+	m_swapChain = desc.graphicsDevice.createSwapChain(SwapChainDesc{ m_size,m_hwnd, *m_commandList});
 }
 
 dx3d::Display::~Display()

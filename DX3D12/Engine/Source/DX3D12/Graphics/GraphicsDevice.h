@@ -16,7 +16,7 @@ namespace dx3d
 
 		FencePtr createFence();
 		MsaaPtr createMsaa();
-		CommandListPtr createCommadList();
+		CommandListPtr createCommandList();
 		SwapChainPtr createSwapChain(const SwapChainDesc& desc);
 		 
 

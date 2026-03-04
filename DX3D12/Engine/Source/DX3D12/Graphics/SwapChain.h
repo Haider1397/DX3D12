@@ -1,7 +1,8 @@
 #pragma once
 
 #include<DX3D12/Graphics/GraphicsResources.h>
-//#include<DX3D12/Graphics/CommandList.h>
+#include<DX3D12/Graphics/CommandList.h>
+#include<DX3D12/Core/Core.h>
 
 namespace dx3d 
 {
@@ -12,6 +13,7 @@ namespace dx3d
 		~SwapChain();
 
 	private:
+
 		Rect m_size{};
 		bool m_4xmsaaState{false};
 		UINT m_4xmsaaQuality{};
@@ -21,6 +23,7 @@ namespace dx3d
 
 
 		Microsoft::WRL::ComPtr<IDXGISwapChain> m_swapChain{};
+		Microsoft::WRL::ComPtr<ID3D12CommandQueue> m_commandQurey{};
 
 	};
 }

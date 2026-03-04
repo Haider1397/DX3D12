@@ -4,11 +4,11 @@
 #undef min;
 
 dx3d::SwapChain::SwapChain(const GraphicsResourcesDesc& gDesc, const SwapChainDesc& desc):
-	GraphicsResources(gDesc)
+	GraphicsResources(gDesc),
+	m_commandQurey(desc.commadList.getCommandQuery())
 {
 	m_swapChain.Reset();
 	DXGI_SWAP_CHAIN_DESC swapChainDesc{};
-
 
 	swapChainDesc.BufferDesc.Width = std::max(1, m_size.x);
 	swapChainDesc.BufferDesc.Height = std::max(1, m_size.y);
@@ -26,8 +26,8 @@ dx3d::SwapChain::SwapChain(const GraphicsResourcesDesc& gDesc, const SwapChainDe
 	swapChainDesc.OutputWindow = static_cast<HWND>(desc.hwnd);
 	swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
 
-	//DX3DGraphicsLogThrowOnFail(m_factory.CreateSwapChain(NULL, &swapChainDesc, &m_swapChain),
-	//	"CreateSwapChain failed.");
+	DX3DGraphicsLogThrowOnFail(m_factory.CreateSwapChain(m_commandQurey.Get(), &swapChainDesc, &m_swapChain),
+		"CreateSwapChain failed.");
 
 }
 

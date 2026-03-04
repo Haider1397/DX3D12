@@ -26,3 +26,13 @@ dx3d::CommandList::CommandList(const GraphicsResourcesDesc& gDesc) :
 dx3d::CommandList::~CommandList()
 {
 }
+
+Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> dx3d::CommandList::getCommandlist()
+{
+	return m_list;
+}
+
+Microsoft::WRL::ComPtr<ID3D12CommandQueue> dx3d::CommandList::getCommandQuery()
+{
+	return m_query;
+}

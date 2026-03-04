@@ -11,11 +11,12 @@ namespace dx3d
 		explicit CommandList(const GraphicsResourcesDesc& gDesc);
 		~CommandList();
 
+		Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> getCommandlist();
+		Microsoft::WRL::ComPtr<ID3D12CommandQueue> getCommandQuery();
+
 	private:
 		Microsoft::WRL::ComPtr<ID3D12CommandAllocator> m_allocator{};
 		Microsoft::WRL::ComPtr<ID3D12CommandQueue> m_query{};
-
-	protected:
 		Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> m_list{};
 	};
 }

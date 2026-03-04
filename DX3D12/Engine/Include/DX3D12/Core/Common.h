@@ -31,6 +31,7 @@ namespace dx3d
 	{
 		Rect wndSize;
 		void* hwnd;
+		CommandList& commadList;
 	};
 
 	struct GameDesc 
