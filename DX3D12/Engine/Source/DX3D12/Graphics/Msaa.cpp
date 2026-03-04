@@ -2,7 +2,7 @@
 #include<DX3D12/Graphics/GraphicsLogUtils.h>
 
 
-dx3d::Msaa::Msaa(const GraphicsResourcesDesc& gdesc) :
+dx3d::Msaa::Msaa(const GraphicsResourcesDesc& gdesc):
 	GraphicsResources(gdesc)
 {
 	D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS qualityLvls{};
@@ -19,6 +19,17 @@ dx3d::Msaa::Msaa(const GraphicsResourcesDesc& gdesc) :
 	assert(m_4xMsaaQualityLvl > 0 && "Unexpected MSAA quality level.");
 }
 
+
 dx3d::Msaa::~Msaa()
 {
+}
+
+DXGI_FORMAT& dx3d::Msaa::getBackBufferFormet()
+{
+	return m_backBufferFormet;
+}
+
+UINT& dx3d::Msaa::GetMsaaQualityLvl()
+{
+	return m_4xMsaaQualityLvl;
 }

@@ -8,9 +8,9 @@ dx3d::CommandList::CommandList(const GraphicsResourcesDesc& gDesc) :
 	queryDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
 	queryDesc.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE;
 
-	DX3DGraphicsLogThrowOnFail(m_device.CreateCommandQueue(&queryDesc, IID_PPV_ARGS(&m_query)),
+	DX3DGraphicsLogThrowOnFail(m_device.CreateCommandQueue(&queryDesc, IID_PPV_ARGS(m_query.GetAddressOf())),
 		"CreateCommandQueue failed.");
-	DX3DGraphicsLogThrowOnFail(m_device.CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&m_allocator)),
+	DX3DGraphicsLogThrowOnFail(m_device.CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(m_allocator.GetAddressOf())),
 		"CreateCommandAllocator failed.");
 
 	DX3DGraphicsLogThrowOnFail(m_device.CreateCommandList(NULL, D3D12_COMMAND_LIST_TYPE_DIRECT,m_allocator.Get(),

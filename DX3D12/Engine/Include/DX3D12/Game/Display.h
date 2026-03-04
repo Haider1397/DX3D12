@@ -3,6 +3,7 @@
 #include<DX3D12/Window/Window.h>
 #include<DX3D12/Core/Common.h>
 #include<DX3D12/Graphics/SwapChain.h>
+#include<DX3D12/Graphics/Msaa.h>
 
 namespace dx3d 
 {
@@ -15,6 +16,7 @@ namespace dx3d
 	private:
 		SwapChainPtr m_swapChain{};
 		CommandListPtr m_commandList{};
+		MsaaPtr m_msaa{};
 	};
 }
 

@@ -32,7 +32,13 @@ namespace dx3d
 		Rect wndSize;
 		void* hwnd;
 		CommandList& commadList;
+		Msaa& msaa;
 	};
+	struct MsaaDesc
+	{
+		void* backBufferFormat;
+	};
+
 
 	struct GameDesc 
 	{
