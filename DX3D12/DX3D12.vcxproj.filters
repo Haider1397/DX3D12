@@ -48,13 +48,22 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Game\Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Engine\Source\DX3D12\Graphics\CommandList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Source\DX3D12\Graphics\SwapChain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Source\DX3D12\Game\Display.cpp">
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\DescriptorHeaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\RenderTargetView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptorHeaps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,6 +107,9 @@
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Include\DX3D12\Game\Display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -107,7 +119,19 @@
     <ClInclude Include="Engine\Source\DX3D12\Graphics\SwapChain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Include\DX3D12\Game\Display.h">
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\DescriptorHeaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Include\d3dx12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\RenderTargetView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorHeaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsComman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
