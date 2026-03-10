@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DescriptorHeaps.cpp" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\DescriptorHeaps.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Game\Display.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\CommandList.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Core\Base.cpp" />
@@ -143,8 +145,12 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\Msaa.cpp" />
     <ClCompile Include="Engine\Source\DX3D12\Graphics\SwapChain.cpp" />
+    <ClCompile Include="Engine\Source\DX3D12\Graphics\RenderTargetView.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DescriptorHeaps.h" />
+    <ClInclude Include="Engine\Include\d3dx12.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\DescriptorHeaps.h" />
     <ClInclude Include="Engine\Include\DX3D12\Game\Display.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h" />
     <ClInclude Include="Engine\Include\DX3D12\All.h" />
@@ -155,6 +161,7 @@
     <ClInclude Include="Engine\Include\DX3D12\Window\Window.h" />
     <ClInclude Include="Engine\Include\DX3D12\Game\Game.h" />
     <ClInclude Include="Engine\Include\DX3D12\Core\Logger.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsComman.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsDevice.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsEngine.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\GraphicsResources.h" />
@@ -162,6 +169,7 @@
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Fence.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\Msaa.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\SwapChain.h" />
+    <ClInclude Include="Engine\Source\DX3D12\Graphics\RenderTargetView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

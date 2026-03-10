@@ -1,7 +1,7 @@
 #pragma once
-
 #include<DX3D12/Core/Base.h>
 #include<DX3D12/Graphics/GraphicsUtils.h>
+#include<DX3D12/>
 
 namespace dx3d
 {
@@ -11,11 +11,6 @@ namespace dx3d
 		std::shared_ptr<const GraphicsDevice> graphicsDevice;
 		ID3D12Device& device;
 		IDXGIFactory4& factory;
-	};
-
-	struct MsaaDesc
-	{
-		DXGI_FORMAT backBufferFormet{};
 	};
 
 	class GraphicsResources: public Base

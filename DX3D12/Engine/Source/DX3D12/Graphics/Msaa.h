@@ -1,5 +1,4 @@
 #pragma once
-
 #include<DX3D12/Graphics/GraphicsResources.h>
 
 namespace dx3d

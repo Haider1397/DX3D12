@@ -14,9 +14,5 @@ namespace dx3d
 	private:
 
 		Microsoft::WRL::ComPtr<ID3D12Fence> m_fence{};
-
-		UINT m_rtvDescSize{};
-		UINT m_dsvDescSize{};
-		UINT m_sbvSrvDescSize{};
 	};
 }
