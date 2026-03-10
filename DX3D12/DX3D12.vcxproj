@@ -145,6 +145,7 @@
     <ClCompile Include="Engine\Source\DX3D12\Graphics\SwapChain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Include\d3dx12.h" />
     <ClInclude Include="Engine\Include\DX3D12\Game\Display.h" />
     <ClInclude Include="Engine\Source\DX3D12\Graphics\CommandList.h" />
     <ClInclude Include="Engine\Include\DX3D12\All.h" />
